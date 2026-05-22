@@ -21,6 +21,8 @@ export function MagneticButton({
   const springX = useSpring(x, { stiffness: 180, damping: 18 });
   const springY = useSpring(y, { stiffness: 180, damping: 18 });
 
+  const opensInNewTab = href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:") || href.endsWith(".pdf") || download;
+
   return (
     <motion.span
       style={{ x: springX, y: springY }}
@@ -38,6 +40,8 @@ export function MagneticButton({
       <Link
         href={href}
         download={download}
+        target={opensInNewTab ? "_blank" : undefined}
+        rel={opensInNewTab ? "noopener noreferrer" : undefined}
         className={cn(
           "group inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-2)]",
           variant === "primary"

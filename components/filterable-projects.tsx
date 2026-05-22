@@ -61,10 +61,10 @@ export function FilterableProjects() {
                   {project.category}
                 </span>
                 <div className="flex gap-2">
-                  <Link href={project.live} aria-label={`${project.title} live demo`} className="grid size-9 place-items-center rounded-full border border-[color:var(--line)]">
+                  <Link href={project.live} target={project.live.startsWith("http") ? "_blank" : undefined} rel={project.live.startsWith("http") ? "noopener noreferrer" : undefined} aria-label={`${project.title} live demo`} className="grid size-9 place-items-center rounded-full border border-[color:var(--line)]">
                     <ExternalLink className="size-4" />
                   </Link>
-                  <Link href={project.github} aria-label={`${project.title} GitHub repository`} className="grid size-9 place-items-center rounded-full border border-[color:var(--line)]">
+                  <Link href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} GitHub repository`} className="grid size-9 place-items-center rounded-full border border-[color:var(--line)]">
                     <Code2 className="size-4" />
                   </Link>
                 </div>

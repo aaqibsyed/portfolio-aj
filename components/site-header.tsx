@@ -35,6 +35,8 @@ export function SiteHeader() {
           </button>
           <Link
             href={profile.resumePath}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden size-10 place-items-center rounded-full border border-[color:var(--line)] bg-[color:var(--card)] backdrop-blur-xl sm:grid"
             aria-label="Download resume"
           >

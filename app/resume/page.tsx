@@ -21,10 +21,10 @@ export default function ResumePage() {
               Software developer building full-stack products, AI integrations, dashboards, performance-focused websites, and polished portfolio systems.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href={profile.resumePath} className="inline-flex min-h-11 items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-orange-500 px-4 text-sm font-semibold text-white">
+              <Link href={profile.resumePath} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-orange-500 px-4 text-sm font-semibold text-white">
                 <Download className="size-4" /> Download Resume
               </Link>
-              <Link href={`mailto:${profile.email}`} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[color:var(--line)] px-4 text-sm font-semibold">
+              <Link href={`mailto:${profile.email}`} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[color:var(--line)] px-4 text-sm font-semibold">
                 <Mail className="size-4" /> Contact
               </Link>
             </div>

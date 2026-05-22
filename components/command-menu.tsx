@@ -31,6 +31,8 @@ export function CommandMenu() {
     [query]
   );
 
+  const isExternal = (href: string) => href.startsWith("http") || href.startsWith("mailto:") || href.endsWith(".pdf");
+
   if (!open) return null;
 
   return (
@@ -52,6 +54,8 @@ export function CommandMenu() {
             <Link
               key={item.href}
               href={item.href}
+              target={isExternal(item.href) ? "_blank" : undefined}
+              rel={isExternal(item.href) ? "noopener noreferrer" : undefined}
               onClick={() => setOpen(false)}
               className="flex items-center justify-between rounded-xl px-3 py-3 text-sm transition hover:bg-[color:var(--card)]"
             >

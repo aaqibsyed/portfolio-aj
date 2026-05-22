@@ -73,7 +73,7 @@ export function GithubDashboard() {
             <p className="text-sm text-[color:var(--muted)]">{status}</p>
           </div>
         </div>
-        <Link href={profile.socials.github} className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[color:var(--line)] px-4 text-sm font-semibold">
+        <Link href={profile.socials.github} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[color:var(--line)] px-4 text-sm font-semibold">
           Open GitHub <ExternalLink className="size-4" />
         </Link>
       </div>
@@ -111,7 +111,7 @@ export function GithubDashboard() {
         </div>
         <div className="grid gap-3 md:grid-cols-2">
           {repos.length ? repos.map((repo) => (
-            <Link key={repo.id} href={repo.html_url} className="rounded-2xl border border-[color:var(--line)] p-4 transition hover:bg-[color:var(--card)]">
+            <Link key={repo.id} href={repo.html_url} target="_blank" rel="noopener noreferrer" className="rounded-2xl border border-[color:var(--line)] p-4 transition hover:bg-[color:var(--card)]">
               <div className="flex items-start justify-between gap-3">
                 <h4 className="font-semibold">{repo.name}</h4>
                 <ExternalLink className="size-4 text-[color:var(--muted)]" />

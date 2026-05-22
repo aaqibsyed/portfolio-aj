@@ -316,10 +316,10 @@ export default function Home() {
             <h2 className="text-4xl font-semibold md:text-5xl">Have a role, project, or technical interview?</h2>
             <p className="mt-4 leading-7 text-[color:var(--muted)]">Send a concise note, book a call, or use your preferred platform. I am available for full-time software developer roles and freelance product work.</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="https://calendly.com/" className="inline-flex min-h-12 items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-orange-500 px-5 text-sm font-semibold text-white">
+              <Link href="https://calendly.com/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-orange-500 px-5 text-sm font-semibold text-white">
                 <Calendar className="size-4" /> Book a Call
               </Link>
-              <Link href={`mailto:${profile.email}`} className="inline-flex min-h-12 items-center gap-2 rounded-full border border-[color:var(--line)] px-5 text-sm font-semibold">
+              <Link href={`mailto:${profile.email}`} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center gap-2 rounded-full border border-[color:var(--line)] px-5 text-sm font-semibold">
                 <Mail className="size-4" /> Email Me
               </Link>
             </div>
@@ -329,10 +329,10 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-6 flex gap-2">
-              <Link href={profile.socials.github} aria-label="GitHub" className="grid size-11 place-items-center rounded-full border border-[color:var(--line)] text-sm font-semibold">GH</Link>
-              <Link href={profile.socials.linkedin} aria-label="LinkedIn" className="grid size-11 place-items-center rounded-full border border-[color:var(--line)] text-sm font-semibold">IN</Link>
-              <Link href={profile.socials.whatsapp} aria-label="WhatsApp" className="grid size-11 place-items-center rounded-full border border-[color:var(--line)]"><MessageCircle className="size-5" /></Link>
-              <Link href={profile.resumePath} aria-label="Download resume" className="grid size-11 place-items-center rounded-full border border-[color:var(--line)]"><Download className="size-5" /></Link>
+              <Link href={profile.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="grid size-11 place-items-center rounded-full border border-[color:var(--line)] text-sm font-semibold">GH</Link>
+              <Link href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="grid size-11 place-items-center rounded-full border border-[color:var(--line)] text-sm font-semibold">IN</Link>
+              <Link href={profile.socials.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="grid size-11 place-items-center rounded-full border border-[color:var(--line)]"><MessageCircle className="size-5" /></Link>
+              <Link href={profile.resumePath} target="_blank" rel="noopener noreferrer" aria-label="Download resume" className="grid size-11 place-items-center rounded-full border border-[color:var(--line)]"><Download className="size-5" /></Link>
             </div>
           </Reveal>
           <ContactForm />
